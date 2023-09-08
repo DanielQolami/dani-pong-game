@@ -179,7 +179,7 @@ function showGameOverEl(winner) {
   gameOverEl.classList.add("game-over-container");
   // Title
   const title = document.createElement("h1");
-  title.textContent = `${winner} Wins!`;
+  title.textContent = winner === "Player" ? "You Won" : "Computer Won";
   // Button
   const playAgainBtn = document.createElement("button");
   playAgainBtn.setAttribute("onclick", "startGame()");
@@ -194,7 +194,7 @@ function gameOver() {
   if (playerScore === winningScore || computerScore === winningScore) {
     isGameOver = true;
     // Set Winner
-    const winner = playerScore === winningScore ? "Player 1" : "Computer";
+    const winner = playerScore === winningScore ? "Player" : "Computer";
     showGameOverEl(winner);
   }
 }
