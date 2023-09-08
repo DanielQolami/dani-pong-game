@@ -179,7 +179,7 @@ function showGameOverEl(winner) {
   gameOverEl.classList.add("game-over-container");
   // Title
   const title = document.createElement("h1");
-  title.textContent = winner === "Player" ? "You Won" : "Computer Won";
+  title.textContent = winner === "Player" ? "You Won!" : "Computer Won!";
   // Button
   const playAgainBtn = document.createElement("button");
   playAgainBtn.setAttribute("onclick", "startGame()");
